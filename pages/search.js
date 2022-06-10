@@ -9,7 +9,7 @@ import SearchResults from '../components/SearchResults'
 
 function Search({ results }) {
   const router = useRouter()
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true)
   return (
     <div className={`${dark && 'dark'}`}>
       <div className="dark:bg-slate-800 h-full overflow-y-hidden relative">

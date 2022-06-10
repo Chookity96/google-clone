@@ -8,7 +8,7 @@ import { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 
 export default function Home() {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true)
   const router = useRouter()
   const searchInputRef = useRef(null)
   const search = (e) => {
