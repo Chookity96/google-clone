@@ -2,8 +2,8 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="divide-y-[1px] w-full divide-gray-300 bg-[#f2f2f2] text-gray-500">
-        <div className='py-3 px-6'>
+    <footer className="divide-y-[1px] w-full divide-gray-300 bg-[#f2f2f2] text-gray-500 dark:bg-slate-900 dark:text-white">
+        <div className='py-3 px-6 flex justify-between'>
             <p>Singapore</p>
         </div>
 
