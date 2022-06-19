@@ -2,8 +2,10 @@ import React from 'react'
 import PaginationBtn from './PaginationBtn'
 
 function SearchResults({ results }) {
+	console.log(results)
+	// ${(results.items?.length < 10 || !results.items) && "h-screen"}
 	return (
-		<div className="mx-auto w-full px-3 sm:pl-[5%] md:pl-[10%]">
+		<div className={`mx-auto w-full px-3 sm:pl-[5%] md:pl-[10%] ${(results.items?.length < 3 || !results.items) && "h-screen"}`}>
 			<p className='text-gray-600 text-md mb-5 mt-3 dark:text-white'>
 				About {results.searchInformation?.formattedTotalResults} results ({results.searchInformation?.formattedSearchTime} seconds)
 			</p>
@@ -21,7 +23,7 @@ function SearchResults({ results }) {
 					</div>
 				))
 			}
-			<PaginationBtn />
+			<PaginationBtn results={results} />
 		</div>
 	)
 }

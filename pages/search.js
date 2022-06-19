@@ -11,7 +11,7 @@ function Search({ results }) {
   const router = useRouter()
   const [dark, setDark] = useState(true)
   return (
-    <div className={`${dark && 'dark'}`}>
+    <div className={`${dark && 'dark'} h-full`}>
       <div className="dark:bg-slate-800 h-full overflow-y-hidden relative">
         <Head>
           <title>{router.query.term}</title>
@@ -29,6 +29,7 @@ function Search({ results }) {
           Dark Theme: {dark ? 'On' : 'Off'}
         </p>
       </div>
+      {/* <div className="h-screen w-full z-10 bg-slate-800"></div> */}
     </div>
   )
 }
@@ -36,7 +37,7 @@ function Search({ results }) {
 export default Search
 
 export async function getServerSideProps(context) {
-  const useDummyData = true
+  const useDummyData = false
   const startIndex = context.query.start || '0'
 
   const data = useDummyData
