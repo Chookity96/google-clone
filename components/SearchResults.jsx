@@ -3,7 +3,7 @@ import PaginationBtn from './PaginationBtn'
 
 function SearchResults({ results }) {
 	return (
-		<div className={`mx-auto w-full px-3 sm:pl-[5%] md:pl-[10%] ${(results.items?.length < 3 || !results.items) && "h-screen"}`}>
+		<div className={`mx-auto w-full px-3 sm:pl-[5%] md:pl-[10%] min-h-[calc(100vh_-_143px)]`}>
 			<p className='text-gray-600 text-md mb-5 mt-3 dark:text-white'>
 				About {results.searchInformation?.formattedTotalResults} results ({results.searchInformation?.formattedSearchTime} seconds)
 			</p>
